@@ -1,1 +1,28 @@
-<p>menu-bar works!</p>
+
+<div class="conteiner__menu-bar">
+  <a href="#home" class="logo">Tri<span>Dev</span></a>
+
+  <button
+    [class.btnOpen]="menuVariable"
+    class="btn-open-menu"
+    (click)="openMenu()"
+  >
+    <i class="bi bi-list"></i>
+  </button>
+
+  <button
+    [class.btnclose]="menuVariable"
+    class="btn-close-menu"
+    (click)="openMenu()"
+  >
+    <i class="bi bi-x-lg"></i>
+  </button>
+
+  <ul class="menu__bar" [class.menuClass]="menuVariable">
+    <li><a href="#home" (click)="openMenu()">Home</a></li>
+    <li><a href="#about" (click)="openMenu()">Sobre Nos</a></li>
+    <li><a href="#works" (click)="openMenu()">Trabalhos</a></li>
+    <li><a href="#contact" (click)="openMenu()">Contatos</a></li>
+  </ul>
+</div>
+<div [class.overlay-menu]="overlayVariable"></div>
